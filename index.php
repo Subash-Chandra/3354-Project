@@ -4,17 +4,21 @@ include("auth.php");
 ?>
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<title>Welcome Home</title>
-<link rel="stylesheet" href="css/style.css" />
-</head>
-<body>
-<div class="form">
-<p>Welcome <?php echo $_SESSION['username']; ?>!</p>
-<p>This is secure area.</p>
-<p><a href="dashboard.php">Dashboard</a></p>
-<a href="logout.php">Logout</a>
-</div>
-</body>
+    <head>
+        <meta charset="utf-8">
+        <title>Welcome Home</title>
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+    <div class="container">
+      <div id="home" class="flex-center flex-column">
+        <h1>Quick Quiz</h1>
+        <a href="/play.html" class="btn">Play </a>
+        <a href="/leaderboard.html" class="btn">Leaderboard</a>
+        <a href="/options.html" class="btn">Options</a>
+        <p><a href="dashboard.php">Dashboard</a></p>
+        <a href="logout.php">Logout</a>
+      </div>
+    </div>
+    </body>
 </html>
