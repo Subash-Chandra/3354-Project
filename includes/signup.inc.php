@@ -18,6 +18,3 @@ if(isset($_POST["submit"])){
 else{
     header("location: ../signup.html");
 }
-
-
-// THIS IS A COMMENT
