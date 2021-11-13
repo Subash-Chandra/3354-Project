@@ -1,12 +1,13 @@
 <?php
 
-$serverName ="localhost";
-$dBUsername ="dbadmin";
-$dBPassword ="crayon36mesh";
-$dBName ="loginsystem";
+session_start();
+$host ="localhost";
+$user ="dbadmin";
+$pass ="crayon36mesh";
+$dBname ="loginsystem";
 
-$conn mysqli_connect($serverName, $dBUsername, $dBPassword, $dbName);
+$conn = mysqli_connect($serverName, $dBUsername, $dBPassword, $dbName);
 
-if(!conn){
-    die("connection failed: ".mysqli_connect_error());
+if(!$conn){
+    die("Connection failed: ".mysqli_connect_error());
 }
