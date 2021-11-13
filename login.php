@@ -35,7 +35,6 @@ and password='".md5($password)."'";
 ?>
 <div class="form">
 <h1>Is This Even Real?</h1>
-<h2> Log in</h2>
 <form action="" method="post" name="login">
 <input type="text" name="username" placeholder="Username" required />
 <input type="password" name="password" placeholder="Password" required />
