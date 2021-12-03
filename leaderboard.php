@@ -24,11 +24,10 @@ include("auth.php");
         $query = "SELECT `username` FROM `users` ORDER BY `highscore` DESC LIMIT 1;";
         $result = mysqli_query($con, $query);
         if ($result == FALSE) die ("could not execute statement $query<br />");
-/*
+
         while($row = mysql_fetch_row($result) {
             echo("got row");
-        }
-  */      
+        }  
         
     ?>
     <h1>Leaderboard</h1>
