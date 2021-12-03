@@ -47,13 +47,13 @@ if (isset($_POST['username'])){
 		$query = "SELECT * FROM `fake`";
 		$imageList = mysqli_query($imageDBCon, $query);
 		if ($imageList == FALSE) die ("could not execute statement $query<br />");
-		//$i = random_int() % mysqli_num_rows($imageList);
+		$i = random_int() % mysqli_num_rows($imageList);
 		//echo ($i);
 		//echo (mysqli_fetch_row($imageList)[1]);
 		?>
 		<div class="form">
 			<h1>Is This Even Real?</h1>
-			<img src=../test.jpg></img>
+			<img src=/images/fake/faces/></img>
 			<h2> Log in</h2>
 			<form action="" method="post" name="login">
 			<input type="text" name="username" placeholder="Username" required />
