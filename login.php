@@ -53,7 +53,7 @@ if (isset($_POST['username'])){
 		$image = mysqli_query($imageDBCon, $imageFetchQuery);
 		if ($image == FALSE) die ("could not execute statement $imageFetchQuery<br />");
 		
-		echo ($image);
+		echo (mysqli_fetch_row($image)[0]);
 		?>
 
 		<div class="form">
