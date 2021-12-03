@@ -15,7 +15,7 @@ include("auth.php");
     <div class="container">
       <div id="home" class="flex-center flex-column">
         <h1>Is This Even Real?</h1>
-        <a href="/play.html" class="btn">Play </a>
+        <a href="/gameselect.php" class="btn">Play </a>
         <a href="/leaderboard.html" class="btn">Leaderboard</a>
         <a href="/options.html" class="btn">Options</a>
         <p><a href="dashboard.php">Dashboard</a></p>
