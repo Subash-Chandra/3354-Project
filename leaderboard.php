@@ -16,10 +16,10 @@ require("db.php");
 <body>
     <?php
         
-        var result = mysqli_query($con, "SELECT * FROM `users` 
+        /*var result = mysqli_query($con, "SELECT * FROM `users` 
                         ORDER BY `highscore` DESC LIMIT 5;") 
                         or die(mysql_error());
-        
+        */
         echo 'result';
         
         
