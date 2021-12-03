@@ -33,7 +33,7 @@ include("auth.php");
             <button onclick="submitAnswer(gametype.choice.value, gamemode.choice.value)">Submit</button>
         </div>
     </div>
-    <div><button onclick="location.href='index.html'">Home</button></div>
+    <div><button onclick="location.href='index.php'">Home</button></div>
 </body>
 </html>
 
