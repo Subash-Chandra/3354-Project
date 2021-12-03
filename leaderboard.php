@@ -1,4 +1,6 @@
 <?php
+ini_set('display_errors', '1');
+error_reporting(E_ALL);
 //include auth.php file on all secure pages
 include("auth.php");
 
@@ -16,11 +18,14 @@ include("auth.php");
 <body>
     <?php
         require("db.php");
+        $query = "SELECT `username` FROM `users` ORDER BY `highscore` DESC LIMIT 1;";
+        $result = mysqli_query($con, $stmt);
+        if ($result == FALSE) die ("could not execute statement $query<br />");
 
-        $users = mysqli_query($con, "SELECT `username` FROM `users` 
-                        ORDER BY `highscore` DESC LIMIT 5;")
-                        or die(mysql_error());
-        echo $users;
+        while($row = $result.fetch_row()) {
+            echo($row[0])
+        }
+        
         
     ?>
     <h1>Leaderboard</h1>
