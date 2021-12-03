@@ -44,13 +44,12 @@ if (isset($_POST['username'])){
 	else
 	{
 		require("imageDB.php");
-		$query = "SELECT * FROM `fake`";
-		$imageList = mysqli_query($imageDBCon, $query);
+		$numRowQuery = "SELECT * FROM `fake`";
+		$imageList = mysqli_query($imageDBCon, $numRowQuery);
 		if ($imageList == FALSE) die ("could not execute statement $query<br />");
 		$i = random_int(0, mysqli_num_rows($imageList));
-		echo ($i);
-		$row = mysqli_fetch_row($imageList);
-		echo ($row[1]);
+		$imageFetchQuery = "SELECT `filename` FROM `fake` WHERE `id`=$i"
+		$image = mysqli_fetch_row(mysqli_query($imageDBCon, $imageFetchQuery));
 		?>
 		<div class="form">
 			<h1>Is This Even Real?</h1>
