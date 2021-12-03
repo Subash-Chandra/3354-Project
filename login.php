@@ -24,7 +24,9 @@ and password='".md5($password)."'";
 	$rows = mysqli_num_rows($result);
         if($rows==1){
 	    $_SESSION['username'] = $username;
-            // Redirect user to index.php
+		date = date("Y-m-d H:i:s");
+		mysqli_query($con,"UPDATE users SET lastLogin")
+        // Redirect user to index.php
 	    header("Location: index.php");
          }else{
 	echo "<div class='form'>
