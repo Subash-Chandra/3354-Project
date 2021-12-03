@@ -22,22 +22,18 @@ include("auth.php");
     <h1>Leaderboard</h1>
     <?php
         require("db.php");
-        $query = "SELECT `username` FROM `users` ORDER BY `highscore` DESC LIMIT 5;";
+        $query = "SELECT `username` AND `highscore` FROM `users` ORDER BY `highscore` DESC LIMIT 5;";
         $result = mysqli_query($con, $query);
         if ($result == FALSE) die ("could not execute statement $query<br />");
 
         while($row = mysqli_fetch_row($result)) {
-            echo($row[0]);
+            echo($row[0] + '\t' + $row[1] + '\n');
         }
         
     ?>
-
     
-    
-
-    <h1>Leaderboard</h1>
     <h5 id="padding">-</h5>
     <div><button onclick="location.href='index.php'">Home</button></div>
-
+    
 </body>
 </html>
