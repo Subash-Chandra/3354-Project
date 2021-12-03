@@ -33,9 +33,6 @@ include("auth.php");
             <button onclick="submitAnswer(gametype.choice.value, gamemode.choice.value)">Submit</button>
         </div>
     </div>
-    <form>
-        <input type="button" value="Go back!" onclick="history.back()">
-    </form>
 </body>
 </html>
 
