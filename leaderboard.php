@@ -32,6 +32,7 @@ include("auth.php");
         
     ?>
     <h1>Leaderboard</h1>
-    
+    <h5 id="padding">-</h5>
+    <div><button onclick="location.href='index.php'">Home</button></div>
 </body>
 </html>
