@@ -25,7 +25,7 @@ and password='".md5($password)."'";
         if($rows==1){
 	    $_SESSION['username'] = $username;
 		$date = date("Y-m-d H:i:s");
-		//mysqli_query($con,"UPDATE `users` SET lastLogin = $date WHERE username='$username'");
+		mysqli_query($con,"UPDATE `users` SET lastLogin = '$date' WHERE username='$username'");
         // Redirect user to index.php
 	    header("Location: index.php");
          }else{
