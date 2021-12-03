@@ -18,10 +18,11 @@ include("auth.php");
         require("db.php");
 
         $result = mysqli_query($con, "SELECT * FROM `users` 
-                        ORDER BY `highscore` DESC LIMIT 5;") 
-                        or die(mysql_error());
-        //echo $result;
+                        ORDER BY `highscore` DESC LIMIT 5;");
+                        //or die(mysql_error());
+        
         
     ?>
+    <h1>Leaderboard</h1>
 </body>
 </html>
