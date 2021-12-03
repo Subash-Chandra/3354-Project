@@ -52,6 +52,8 @@ if (isset($_POST['username'])){
 		$imageFetchQuery = "SELECT `filename` FROM `fake` WHERE `id`=$i";
 		$image = mysqli_query($imageDBCon, $imageFetchQuery);
 		if ($image == FALSE) die ("could not execute statement $imageFetchQuery<br />");
+		
+		echo ($image);
 		?>
 
 		<div class="form">
