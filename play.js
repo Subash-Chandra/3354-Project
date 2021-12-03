@@ -4,11 +4,6 @@ var images = {
 }  
 
 function populate() {
-    /*
-    if (this.isEnded) {
-    showScores();
-    } else {
-    */
     // show question
     var element = document.getElementById("question");
     element.innerHTML = "Which one is fake?";
@@ -57,7 +52,7 @@ function showProgress() {
 function showScores() {
     var gameOverHTML = "<h1>Result</h1> <?php ?>";
     gameOverHTML += "<h2 id='score'> Your score: " + quiz.score + "</h2>";
-    gameOverHTML += '<div id="game" class="flex-center flex-column">' //change temporarily to line 60
+    gameOverHTML += '<div id="game" class="flex-center flex-column">';
     gameOverHTML += '<div><button onclick="location.href=\'index.php\'"">Home</button></div></div';
     var element = document.getElementById("quiz");
     element.innerHTML = gameOverHTML;
@@ -87,23 +82,6 @@ function Quiz(questions) {
 
 Quiz.prototype.getQuestionIndex = function() {
     return this.questions[this.questionIndex];
-}
-
-Quiz.prototype.guess = function(answer) {
-    if (this.getQuestionIndex().isCorrectAnswer(answer)) {
-        this.score++;
-    }
-    else {
-        //Sudden Death, quit game if not correct
-        this.isEnded = true;
-    }
-
-    this.questionIndex++;
-}
-
-var isEnded = false;
-Quiz.prototype.isEnded = function() {
-    return this.questionIndex === this.questions.length;
 }
 
 // create quiz
