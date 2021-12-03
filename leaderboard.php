@@ -22,8 +22,8 @@ include("auth.php");
         $result = mysqli_query($con, $stmt);
         if ($result == FALSE) die ("could not execute statement $query<br />");
 
-        while($row = $result.fetch_row()) {
-            echo($row[0])
+        while($row = mysql_fetch_row($result) {
+            echo("got row");
         }
         
         
