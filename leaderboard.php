@@ -22,7 +22,7 @@ include("auth.php");
     <h1>Leaderboard</h1>
     <?php
         require("db.php");
-        $query = "SELECT `username` AND `highscore` FROM `users` ORDER BY `highscore` DESC LIMIT 5;";
+        $query = "SELECT * FROM `users` ORDER BY `highscore` DESC LIMIT 5;";
         $result = mysqli_query($con, $query);
         if ($result == FALSE) die ("could not execute statement $query<br />");
 
