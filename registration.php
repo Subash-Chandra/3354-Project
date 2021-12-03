@@ -18,9 +18,9 @@ if (isset($_REQUEST['username'])){
 	$email = mysqli_real_escape_string($con,$email);
 	$password = stripslashes($_REQUEST['password']);
 	$password = mysqli_real_escape_string($con,$password);
-	$trn_date = date("Y-m-d H:i:s");
-        $query = "INSERT into `users` (username, password, email, trn_date)
-VALUES ('$username', '".md5($password)."', '$email', '$trn_date')";
+	$date = date("Y-m-d H:i:s");
+        $query = "INSERT into `users` (username, password, email, dateCreated) 
+                VALUES ('$username', '".md5($password)."', '$email', '$date')";
         $result = mysqli_query($con,$query);
         if($result){
             echo "<div class='form'>
