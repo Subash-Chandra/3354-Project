@@ -1,7 +1,7 @@
 <?php
 //include auth.php file on all secure pages
 include("auth.php");
-require("db.php");
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,7 +15,8 @@ require("db.php");
 </head>
 <body>
     <?php
-        
+        require("db.php");
+        mysqli_query();
         /*var result = mysqli_query($con, "SELECT * FROM `users` 
                         ORDER BY `highscore` DESC LIMIT 5;") 
                         or die(mysql_error());
