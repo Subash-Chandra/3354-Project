@@ -14,10 +14,13 @@ include("auth.php");
 </head>
 <body>
     <?php
-        //var result = 
-        mysqli_query($con, "SELECT * FROM `users`")
-        // ORDER BY `highscore` DESC LIMIT 5;
-        echo result;
+        if ($con) {
+            //var result = 
+            mysqli_query($con, "SELECT * FROM `users`") //or die(mysql_error());
+            // ORDER BY `highscore` DESC LIMIT 5;
+            echo result;
+        }
+        
     ?>
 </body>
 </html>
