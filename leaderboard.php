@@ -14,8 +14,9 @@ include("auth.php");
 </head>
 <body>
     <?php
+        echo $con;
         
-        mysqli_query($con, "SELECT * FROM `users`") or die(mysql_error());
+        //mysqli_query($con, "SELECT * FROM `users`") or die(mysql_error());
         // ORDER BY `highscore` DESC LIMIT 5;
         echo result;
         }
