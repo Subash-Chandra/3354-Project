@@ -42,29 +42,8 @@ var submitAnswer = function(gType, gMode) {
     global gameType=gType;
     global gameMode=gMode;
 
-    window.location.href = game
-
-    /* DEBUGGING
-    switch (String(gameType)) {
-        case "Humans":
-            //do something
-            alert("You selected Humans");
-            break;
-        default:
-            //invalid selection
-            alert("Please select a valid Game Type");
-            break;
-    }
-    switch (String(gameMode)) {
-        case "SuddenDeath":
-            //do something
-            break;
-        default:
-            //invalid selection
-            alert("Please select a valid Game Mode");
-            break;
-    }
-    */
+    //change when we have more than 1 game mode implemented
+    window.location.href = "http://45.33.17.77/play.html";
 
 };
 </script>
