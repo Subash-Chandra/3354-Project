@@ -48,15 +48,15 @@ if (isset($_POST['username'])){
 		$imageList = mysqli_query($imageDBCon, $numRowQuery);
 		if ($imageList == FALSE) die ("could not execute statement $numRowQuery<br />");
 		$i = random_int(0, mysqli_num_rows($imageList));
-
 		$imageFetchQuery = "SELECT `filename` FROM `fake` WHERE `id`=$i";
 		$image = mysqli_query($imageDBCon, $imageFetchQuery);
 		if ($image == FALSE) die ("could not execute statement $imageFetchQuery<br />");
+		$imageLocation = mysqli_fetch_row($image)[0];
 		?>
 
 		<div class="form">
 			<h1>Is This Even Real?</h1>
-			<img src=/images/fake/faces/></img>
+			<img src=/images/fake/faces/<?php echo $imageLocation ?> width=250 height=250></img>
 			<h2> Log in</h2>
 			<form action="" method="post" name="login">
 			<input type="text" name="username" placeholder="Username" required />
