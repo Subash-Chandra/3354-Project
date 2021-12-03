@@ -16,7 +16,7 @@ include("auth.php");
 <body>
     <?php
         require("db.php");
-        mysqli_query($con);
+        mysqli_query($con, "SELECT * FROM `users`");
         /*var result = mysqli_query($con, "SELECT * FROM `users` 
                         ORDER BY `highscore` DESC LIMIT 5;") 
                         or die(mysql_error());
