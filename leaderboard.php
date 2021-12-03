@@ -27,11 +27,14 @@ include("auth.php");
         if ($result == FALSE) die ("could not execute statement $query<br />");
 
         while($row = mysqli_fetch_row($result)) {
-            echo($row[0] + '\t' + $row[1] + '\n');
+            echo($row[0]);
+            echo("    ");
+            echo($row[1]);
+            ?><br><?php           
         }
         
     ?>
-    
+
     <h5 id="padding">-</h5>
     <div><button onclick="location.href='index.php'">Home</button></div>
     
