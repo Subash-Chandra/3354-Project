@@ -59,7 +59,7 @@ if (isset($_POST['username'])){
 
 		<div class="form">
 			<h1>Is This Even Real?</h1>
-			<img src=/images/fake/faces/<?php $imageLocation ?>></img>
+			<img src=/images/fake/faces/<?php echo $imageLocation ?>></img>
 			<h2> Log in</h2>
 			<form action="" method="post" name="login">
 			<input type="text" name="username" placeholder="Username" required />
