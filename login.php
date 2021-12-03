@@ -38,6 +38,13 @@ if (isset($_POST['username'])){
     }
 	else
 	{
+		require("imageDB.php");
+		$query = "SELECT * FROM `fake`";
+		$imageList = mysqli_query($imageDBCon, $query);
+
+		$i = random_int() % mysqli_num_rows($imageList);
+		echo ($i);
+		echo (mysqli_fetch_row($imageList)[1]);
 		?>
 		<div class="form">
 			<h1>Is This Even Real?</h1>

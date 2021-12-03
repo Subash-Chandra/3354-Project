@@ -18,7 +18,6 @@ include("auth.php");
         <a href="/gameselect.php" class="btn">Play </a>
         <a href="/leaderboard.php" class="btn">Leaderboard</a>
         <a href="/options.html" class="btn">Options</a>
-        <p><a href="dashboard.php">Dashboard</a></p>
         <a href="logout.php">Logout</a>
       </div>
     </div>
