@@ -7,6 +7,11 @@
 </head>
 <body>
 <?php
+error_reporting(-1);
+// Same as error_reporting(E_ALL);
+ini_set('error_reporting', E_ALL);
+ini_set('display_errors', 'On');  //On or Off
+
 require('db.php');
 session_start();
 // If form submitted, insert values into the database.
@@ -41,10 +46,10 @@ if (isset($_POST['username'])){
 		require("imageDB.php");
 		$query = "SELECT * FROM `fake`";
 		$imageList = mysqli_query($imageDBCon, $query);
-
-		$i = random_int() % mysqli_num_rows($imageList);
-		echo ($i);
-		echo (mysqli_fetch_row($imageList)[1]);
+		if ($imageList == FALSE) die ("could not execute statement $query<br />");
+		//$i = random_int() % mysqli_num_rows($imageList);
+		//echo ($i);
+		//echo (mysqli_fetch_row($imageList)[1]);
 		?>
 		<div class="form">
 			<h1>Is This Even Real?</h1>
