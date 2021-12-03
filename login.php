@@ -22,13 +22,15 @@ if (isset($_POST['username'])){
 and password='".md5($password)."'";
 	$result = mysqli_query($con,$query) or die(mysql_error());
 	$rows = mysqli_num_rows($result);
-        if($rows==1){
+        if ($rows==1){
 	    $_SESSION['username'] = $username;
 		$date = date("Y-m-d H:i:s");
 		mysqli_query($con,"UPDATE `users` SET lastLogin = '$date' WHERE username='$username'");
         // Redirect user to index.php
 	    header("Location: index.php");
-         }else{
+        }
+		else
+		{
 	echo "<div class='form'>
 <h3>Username/password is incorrect.</h3>
 <br/>Click here to <a href='login.php'>Login</a></div>";
