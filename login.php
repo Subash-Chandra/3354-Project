@@ -49,7 +49,7 @@ if (isset($_POST['username'])){
 		if ($imageList == FALSE) die ("could not execute statement $query<br />");
 		$i = random_int(0, mysqli_num_rows($imageList));
 		echo ($i);
-		//echo (mysqli_fetch_row($imageList)[1]);
+		echo (mysqli_fetch_row($imageList)[1]);
 		?>
 		<div class="form">
 			<h1>Is This Even Real?</h1>
