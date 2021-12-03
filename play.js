@@ -57,7 +57,7 @@ function showProgress() {
 function showScores() {
     var gameOverHTML = "<h1>Result</h1> <?php ?>";
     gameOverHTML += "<h2 id='score'> Your score: " + quiz.score + "</h2>";
-    gameOverHTML += '<div id="game" class="flex-center flex-column">' //change temporarily to line 60
+    gameOverHTML += '<div id="game" class="flex-center flex-column">'; //change temporarily to line 60
     gameOverHTML += '<div><button onclick="location.href=\'index.php\'"">Home</button></div></div';
     var element = document.getElementById("quiz");
     element.innerHTML = gameOverHTML;
