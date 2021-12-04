@@ -14,8 +14,8 @@ ini_set('display_errors', 'On');  //On or Off
 include ('auth.php');
 require('db.php'); 
 
-$query = "UPDATE `users` SET `highscore` = 1 WHERE username = '$_SESSION["username"]'";
-$result = mysqli_query($con, $query);
+//$query = "UPDATE `users` SET `highscore` = 1 WHERE username = '$_SESSION["username"]'";
+$result = mysqli_query($con, "SELECT * FROM `users`");
 if ($result == FALSE) die ("could not execute statement $query<br />");
 ?>
 
