@@ -68,13 +68,9 @@ function showScores() {
 
 function saveScore() {
     alert("saveScore called.");
-    $.post("saveScore.php",
-    {
-        score: quiz.score
-    }, 
-    function(data,status) {
-        alert("score saved!");
-    })
+    $.post('saveScore.php', {score: quiz.score}) 
+    .done(function() { alert("score saved!"); })
+    .fail(function(xhr, status, error) { alert("failure"); })
 };
 
 // create questions
