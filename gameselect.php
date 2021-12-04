@@ -18,20 +18,19 @@ include("auth.php");
         <div id="game" class="flex-center flex-column">
             <h1>Is This Even Real?</h1>
             <h2 id="question">Game Type</h2>
-            <div class="choice-container">
+            <div class="choice-container" style='margin-bottom: 40px;'>
                 <form id = "gametype">
-                <input type="radio" name="choice" value="Humans" checked> Humans
+                <input type="radio" name="choice" value="Humans" checked> <label style="font-size: 2.8rem;font-weight: 500;">Humans</label>
                 </form>
             </div>
             <h2 id="question">Game Mode</h2>
-            <div class="choice-container">
+            <div class="choice-container" style='margin-bottom: 40px;'>
                 <form id = "gamemode">
-                <input type="radio" name="choice" value="SuddenDeath" checked> Sudden Death
+                <input type="radio" name="choice" value="SuddenDeath" checked> <label style="font-size: 2.8rem;font-weight: 500;">Sudden Death</label>
                 </form>    
             </div>
             <script type="text/javascript" src="gameinfo.js"></script>
-            <button onclick="submitAnswer(gametype.choice.value, gamemode.choice.value)">Submit</button>
-            <h5 id="padding">-</h5>
+            <button style='margin-bottom: 40px;' class="btn" onclick="submitAnswer(gametype.choice.value, gamemode.choice.value)">Submit</button>
             <div><button onclick="location.href='index.php'">Home</button></div>
         </div>
     </div>
