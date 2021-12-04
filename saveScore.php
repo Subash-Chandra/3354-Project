@@ -1,10 +1,17 @@
 <?php
 require('db.php');
 
-$score = 3; //$_POST['score'];
-$currentUser = $_SESSION["username"];
-$query = "UPDATE `users` SET `highscore` = $score WHERE `username` = '$currentUser'";
+if (isset($_POST["score"])) {
+    $score = $_POST["score"];
+    echo ("Found score of " + $score);
+}
+else $score = 3;
 
+$currentUser = $_SESSION["username"];
+echo ($currentUser);
+$query = "UPDATE `users` SET `highscore` = $score WHERE `username` = '$currentUser'";
+echo ($query);
 mysqli_query($con, $query);
 
+header("Location: index.php");
 ?>
