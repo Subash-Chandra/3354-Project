@@ -6,6 +6,6 @@ var submitAnswer = function(gType, gMode) {
     gameType=gType;
     gameMode=gMode;
 
-    window.location = "play.html";
+    window.location = "play.php";
 
 };
