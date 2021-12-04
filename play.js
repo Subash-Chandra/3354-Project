@@ -63,7 +63,7 @@ function showScores() {
     "?>";
     gameOverHTML += "<h2 id='score'> Your score: " + quiz.score + "</h2>";
     gameOverHTML += '<div id="game" class="flex-center flex-column">';
-    gameOverHTML += '<div><button onclick="location.href=\'index.php\'"">Home</button></div></div';
+    gameOverHTML += '<div><button class="btn" onclick="location.href=\'index.php\'"">Home</button></div></div';
     var element = document.getElementById("quiz");
     element.innerHTML = gameOverHTML;
 };
