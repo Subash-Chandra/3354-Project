@@ -55,7 +55,7 @@ function showProgress() {
 };
 
 function showScores() {
-    alert("showScores called.");
+    //alert("showScores called.");
     saveScore();
     alert("saveScore.php finished.");
     var gameOverHTML = "<h1>Result</h1>";
@@ -71,16 +71,10 @@ function saveScore() {
     $.post("saveScore.php",
     {
         score: quiz.score,
-    }, function() {
+    }, 
+    function(data,status) {
         alert("score saved!");
     })
-    .fail(function () {
-        alert("unknown failure saving score");
-    })
-    .always(function () {
-        alert("Game over!");
-    });
-    alert("post done.");
 };
 
 // create questions
