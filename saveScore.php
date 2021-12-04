@@ -17,4 +17,5 @@ echo("User check done\n");
 $query = "UPDATE `users` SET `highscore` = $score WHERE `username` = '$currentUser'";
 mysqli_query($con, $query);
 
+$con->close();
 ?>
