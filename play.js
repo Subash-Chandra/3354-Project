@@ -70,6 +70,14 @@ function saveScore() {
     $.post("saveScore.php",
     {
         score: quiz.score,
+    }, function() {
+        alert("score saved!");
+    })
+    .fail(function () {
+        alert("unknown failure saving score");
+    })
+    .always(function () {
+        alert("Game over!");
     });
 };
 
