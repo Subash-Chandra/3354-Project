@@ -55,15 +55,14 @@ function showProgress() {
 };
 
 function showScores() {
+    var sqlQuery = 'UPDATE `users` SET `highscore` = ' + quiz.score + ' WHERE `username` = "$username"'
+    alert(sqlQuery);
     var gameOverHTML = "<h1>Result</h1>";
-    gameOverHTML += "<?php include ('auth.php'); require('db.php');" +
-    "$username = $_SESSION['username'];" +
-    "$result = mysqli_query($con, \"UPDATE `users` SET `highscore` = " + 
-    quiz.score + " WHERE `username` = '$username'\");" +
-    "?>";
+    gameOverHTML += "<?php echo('HELLO'); ?>";
     gameOverHTML += "<h2 id='score'> Your score: " + quiz.score + "</h2>";
     gameOverHTML += '<div id="game" class="flex-center flex-column">';
-    gameOverHTML += '<div><button class="btn" onclick="location.href=\'index.php\'"">Home</button></div></div';
+    gameOverHTML += '<div><button class="btn" onclick="location.href=\'index.php\'"">Home</button></div></div>';
+    alert(gameOverHTML);
     var element = document.getElementById("quiz");
     element.innerHTML = gameOverHTML;
 };
