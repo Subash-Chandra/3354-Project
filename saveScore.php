@@ -15,7 +15,7 @@ if (isset($_SESSION["username"])) {
 echo("User check done\n");
 $currentUser = $_SESSION["username"];
 $query = "UPDATE `users` SET `highscore` = $score WHERE `username` = '$currentUser'";
-//echo ($query);
+echo ($query);
 mysqli_query($con, $query);
 
 //header("Location: index.php");
