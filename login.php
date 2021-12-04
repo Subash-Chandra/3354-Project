@@ -56,6 +56,8 @@ if (isset($_POST['username'])){
 
 		<center><h1 style="font-size: 5.4rem; color: #56a5eb;margin-bottom: 5rem;">Is This Even Real?</h1></center>
 		<div class="form">
+			<h1>Is This Even Real?</h1>
+			<br>
 			<img src=/images/fake/faces/<?php echo $imageLocation ?> width=250 height=250></img>
 			<h2> Log in</h2>
 			<form action="" method="post" name="login">
