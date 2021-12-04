@@ -19,9 +19,10 @@ include("auth.php");
     
 </head>
 <body>
-<center><h1 style="font-size: 5.4rem; color: #56a5eb;margin-bottom: 5rem;">Leaderboard</h1></center>
 
     <div class="container">
+    <center><h1 style="font-size: 5.4rem; color: #56a5eb;margin-bottom: 5rem;">Leaderboard</h1></center>
+
     <?php
         require("db.php");
         $query = "SELECT * FROM `users` ORDER BY `highscore` DESC LIMIT 5;";
