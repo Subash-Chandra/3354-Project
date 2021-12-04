@@ -7,16 +7,12 @@
 <link rel="stylesheet" href="play.css" />
 
 <?php
-error_reporting(-1);
-// Same as error_reporting(E_ALL);
-ini_set('error_reporting', E_ALL);
-ini_set('display_errors', 'On');  //On or Off
 include ('auth.php');
 require('db.php'); 
-$username = $_SESSION["username"];
+$username = $_SESSION['username'];
 //$query = "UPDATE `users` SET `highscore` = 1 WHERE username = '$_SESSION["username"]'";
-$result = mysqli_query($con, "UPDATE `users` SET `highscore` = 1 WHERE `username` = '$username'");
-if ($result == FALSE) die ("could not execute statement $query<br />");
+$result = mysqli_query($con, 'UPDATE `users` SET `highscore` = 1 WHERE `username` = '$username'');
+if ($result == FALSE) die ('could not execute statement $query<br />');
 ?>
 
 </head>
