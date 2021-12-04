@@ -1,7 +1,7 @@
 var images = {
     "fake"  : "https://via.placeholder.com/225x225?text=fake.jpg",
     "real" : "https://via.placeholder.com/225x225?text=real.jpg",
-}  
+}
 
 function populate() {
     /*
@@ -55,13 +55,10 @@ function showProgress() {
 };
 
 function showScores() {
-    var sqlQuery = 'UPDATE `users` SET `highscore` = ' + quiz.score + ' WHERE `username` = "$username"'
-    alert(sqlQuery);
     var gameOverHTML = "<h1>Result</h1>";
     gameOverHTML += "<h2 id='score'> Your score: " + quiz.score + "</h2>";
     gameOverHTML += '<div id="game" class="flex-center flex-column">';
     gameOverHTML += '<div><button class="btn" onclick="location.href=\'index.php\'"">Home</button></div></div>';
-    alert(gameOverHTML);
     var element = document.getElementById("quiz");
     element.innerHTML = gameOverHTML;
 };
