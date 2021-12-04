@@ -48,11 +48,9 @@ if (isset($_POST['username'])){
 		$imageList = mysqli_query($imageDBCon, $numRowQuery);
 		if ($imageList == FALSE) die ("could not execute statement $numRowQuery<br />");
 		$i = random_int(0, mysqli_num_rows($imageList));
-
 		$imageFetchQuery = "SELECT `filename` FROM `fake` WHERE `id`=$i";
 		$image = mysqli_query($imageDBCon, $imageFetchQuery);
 		if ($image == FALSE) die ("could not execute statement $imageFetchQuery<br />");
-		
 		$imageLocation = mysqli_fetch_row($image)[0];
 		?>
 
