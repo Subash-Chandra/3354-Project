@@ -15,7 +15,7 @@ include ('auth.php');
 require('db.php'); 
 
 //$query = "UPDATE `users` SET `highscore` = 1 WHERE username = '$_SESSION["username"]'";
-$result = mysqli_query($con, "SELECT * FROM `users` WHERE `username` = '$_SESSION["username"]'");
+$result = mysqli_query($con, "SELECT * FROM `users` WHERE `username` = '$_SESSION['username']'");
 if ($result == FALSE) die ("could not execute statement $query<br />");
 ?>
 
