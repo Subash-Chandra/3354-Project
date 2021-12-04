@@ -19,6 +19,7 @@ include("auth.php");
     
 </head>
 <body>
+    <div class="container">
     <h1>Leaderboard</h1>
     <?php
         require("db.php");
@@ -38,5 +39,6 @@ include("auth.php");
     <h5 id="padding">-</h5>
     <div><button onclick="location.href='index.php'">Home</button></div>
     
+    </div>
 </body>
 </html>
