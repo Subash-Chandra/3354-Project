@@ -10,8 +10,9 @@
 include ('auth.php');
 require('db.php'); 
 
-$query = "UPDATE `users` SET `highscore` = 1 WHERE username='$_SESSION["username"]'";
-mysqli_query($con, $query);
+echo ($_SESSION["username"]); 
+//$query = "UPDATE `users` SET `highscore` = 1 WHERE username='$_SESSION["username"]'";
+//mysqli_query($con, $query);
 ?>
 
 </head>
