@@ -9,7 +9,8 @@ if (isset($_POST["score"])) {
 else $score = 3;
 echo("Score check done\n");
 if (isset($_SESSION["username"])) {
-    echo ("Session username is set to " + $_SESSION["username"]);
+    echo ("Session username is set to ");
+    //echo ($_SESSION["username"]);
 }
 echo("User check done\n");
 $currentUser = $_SESSION["username"];
