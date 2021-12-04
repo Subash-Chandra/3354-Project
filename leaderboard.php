@@ -21,6 +21,11 @@ include("auth.php");
 <body>
     <div class="container">
     <h1>Leaderboard</h1>
+    <table>
+        <tr>
+            <th>Score</th>
+            <th>User</th>
+        </tr>
     <?php
         require("db.php");
         $query = "SELECT * FROM `users` ORDER BY `highscore` DESC LIMIT 5;";
@@ -28,10 +33,17 @@ include("auth.php");
         if ($result == FALSE) die ("could not execute statement $query<br />");
 
         while($row = mysqli_fetch_row($result)) {
-            echo($row[1]);
-            echo("    ");
-            echo($row[2]);
-            ?><br><?php           
+            ?>
+            <tr>
+                <td> 
+                    <?php echo($row[1]); ?>
+                </td>
+                <td>
+                    <?php echo($row[2]); ?>
+                </td>
+                
+            <br>
+            <?php           
         }
         
     ?>
