@@ -54,7 +54,7 @@ if (isset($_POST['username'])){
 		$imageLocation = mysqli_fetch_row($image)[0];
 		?>
 
-		<center><h1>Is This Even Real?</h1></center>
+		<center><h1 style="font-size: 5.4rem; color: #56a5eb;margin-bottom: 5rem;">Is This Even Real?</h1></center>
 		<div class="form">
 			<img src=/images/fake/faces/<?php echo $imageLocation ?> width=250 height=250></img>
 			<h2> Log in</h2>
