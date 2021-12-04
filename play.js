@@ -54,9 +54,14 @@ function showProgress() {
     element.innerHTML = "Score " + (quiz.score);
 };
 
+jquery(document).ready(function() {
+    alert("testing");
+});
+
 function showScores() {
     //alert("showScores called.");
     saveScore();
+    debug();
     alert("saveScore.php finished.");
     var gameOverHTML = "<h1>Result</h1>";
     gameOverHTML += "<h2 id='score'> Your score: " + quiz.score + "</h2>";
@@ -68,21 +73,7 @@ function showScores() {
 
 function saveScore() {
     alert("saveScore called. score = " + quiz.score);
-    $.ajax({
-        type: 'POST',
-        url: 'saveScore.php',
-        data: {
-           score: quiz.score
-        },
-        success: function(data){
-           alert('success');
-        },
-        error: function(xhr, textStatus, error){
-            console.log(xhr.statusText);
-            console.log(textStatus);
-            console.log(error);
-        }
-      });
+    
 };
 
 // create questions
