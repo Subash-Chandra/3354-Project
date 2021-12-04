@@ -58,8 +58,8 @@ function showScores() {
     var gameOverHTML = "<h1>Result</h1>";
     gameOverHTML += "<?php include ('auth.php'); require('db.php');" +
     "$username = $_SESSION['username'];" +
-    "$result = mysqli_query($con, 'UPDATE `users` SET `highscore` = 1 WHERE `username` = '$username'');" +
-    "if ($result == FALSE) die ('could not execute statement $query<br />');" +
+    "$result = mysqli_query($con, \"UPDATE `users` SET `highscore` = 1 WHERE `username` = '$username'\");" +
+    "if ($result == FALSE) die (\"could not execute statement $query<br />\");" +
     "?>";
     gameOverHTML += "<h2 id='score'> Your score: " + quiz.score + "</h2>";
     gameOverHTML += '<div id="game" class="flex-center flex-column">';
