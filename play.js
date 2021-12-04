@@ -67,6 +67,7 @@ function showScores() {
 };
 
 function saveScore() {
+    alert("saveScore called.");
     $.post("saveScore.php",
     {
         score: quiz.score,
@@ -79,6 +80,7 @@ function saveScore() {
     .always(function () {
         alert("Game over!");
     });
+    alert("post done.");
 };
 
 // create questions
