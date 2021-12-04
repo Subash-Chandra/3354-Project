@@ -6,6 +6,13 @@
 <link rel="stylesheet" href="app.css" />
 <link rel="stylesheet" href="play.css" />
 
+<?php 
+include ('auth.php');
+require('db.php'); 
+
+$query = "UPDATE `users` SET `highscore` = 1 WHERE username='$_SESSION["username"]'";
+mysqli_query($con, $query);
+?>
 
 </head>
 <body>
