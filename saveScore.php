@@ -13,5 +13,5 @@ $query = "UPDATE `users` SET `highscore` = $score WHERE `username` = '$currentUs
 echo ($query);
 mysqli_query($con, $query);
 
-header("Location: index.php");
+//header("Location: index.php");
 ?>
