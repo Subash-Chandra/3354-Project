@@ -67,7 +67,7 @@ function showScores() {
 };
 
 function saveScore() {
-    alert("saveScore called.");
+    alert("saveScore called. score = " + quiz.score);
     $.ajax({
         type: 'POST',
         url: 'saveScore.php',
