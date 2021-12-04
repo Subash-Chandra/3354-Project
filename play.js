@@ -70,7 +70,7 @@ function saveScore() {
     alert("saveScore called.");
     $.post("saveScore.php",
     {
-        score: quiz.score,
+        score: quiz.score
     }, 
     function(data,status) {
         alert("score saved!");
