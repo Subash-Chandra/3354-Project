@@ -24,7 +24,7 @@ if (isset($_POST['username'])){
 	$password = mysqli_real_escape_string($con,$password);
 	//Checking is user existing in the database or not
     $query = "SELECT * FROM `users` WHERE username='$username' and password='".md5($password)."'";
-	$result = mysqli_query($con,$query) or die(mysql_error());
+	$result = mysqli_query($con,$query) or die("could not execute statement $query<br />");
 	$rows = mysqli_num_rows($result);
         if ($rows==1)
 		{
@@ -54,7 +54,9 @@ if (isset($_POST['username'])){
 		$imageLocation = mysqli_fetch_row($image)[0];
 		?>
 
-		<center><h1 style="font-size: 5.4rem; color: #56a5eb;margin-bottom: 5rem;">Is This Even Real?</h1></center>
+		<center>
+			<h1 style="font-size: 5.4rem; color: #56a5eb;margin-bottom: 5rem;">Is This Even Real?</h1>
+		</center>
 		<div class="form">
 			<br>
 			<img src=/images/fake/faces/<?php echo $imageLocation ?> width=250 height=250></img>

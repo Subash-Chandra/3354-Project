@@ -22,6 +22,11 @@ include("auth.php");
 
     <div class="container">
     <center><h1 style="font-size: 5.4rem; color: #56a5eb;margin-bottom: 5rem;">Leaderboard</h1></center>
+    <table>
+        <tr>
+            <th>Score</th>
+            <th>User</th>
+        </tr>
 
     <?php
         require("db.php");
@@ -30,10 +35,17 @@ include("auth.php");
         if ($result == FALSE) die ("could not execute statement $query<br />");
 
         while($row = mysqli_fetch_row($result)) {
-            echo($row[1]);
-            echo("    ");
-            echo($row[2]);
-            ?><br><?php           
+            ?>
+            <tr>
+                <td> 
+                    <?php echo($row[1]); ?>
+                </td>
+                <td>
+                    <?php echo($row[2]); ?>
+                </td>
+                
+            <br>
+            <?php           
         }
         
     ?>
