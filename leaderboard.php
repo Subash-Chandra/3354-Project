@@ -40,7 +40,7 @@ include("auth.php");
     
     </div>
     <div class="tiny-container">
-    <h5 id="padding">-</h5>
+    <h5 id="padding"></h5>
     <div><button onclick="location.href='index.php'">Home</button></div>
     </div>
 </body>
