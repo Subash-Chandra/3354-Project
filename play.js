@@ -68,9 +68,21 @@ function showScores() {
 
 function saveScore() {
     alert("saveScore called.");
-    $.post('saveScore.php', {score: quiz.score}) 
-    .done(function() { alert("score saved!"); })
-    .fail(function(xhr, status, error) { alert("failure"); })
+    $.ajax({
+        type: 'POST',
+        url: 'saveScore.php',
+        data: {
+           score: quiz.score
+        },
+        success: function(data){
+           alert('success');
+        },
+        error: function(xhr, textStatus, error){
+            console.log(xhr.statusText);
+            console.log(textStatus);
+            console.log(error);
+        }
+      });
 };
 
 // create questions

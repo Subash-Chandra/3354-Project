@@ -12,7 +12,7 @@ if (isset($_POST["score"])) {
 if (isset($_SESSION["username"])) {
     $currentUser = $_SESSION["username"];
 }
-echo("User check done\n");
+//echo("User check done\n");
 
 $query = "UPDATE `users` SET `highscore` = $score WHERE `username` = '$currentUser'";
 mysqli_query($con, $query);
