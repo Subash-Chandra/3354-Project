@@ -21,7 +21,7 @@ include("auth.php");
 </head>
 <body>
 
-    <div class="container">
+    <div class="flex-column container">
     <center><h1 style="font-size: 5.4rem; color: #56a5eb;margin-bottom: 5rem;">Leaderboard</h1></center>
 
     <h2></h2>
@@ -30,6 +30,7 @@ include("auth.php");
             <th>User</th>
             <th>Score</th>
         </tr>
+    </table>
 
     <?php
         require("db.php");
