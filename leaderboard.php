@@ -17,7 +17,11 @@ include("auth.php");
     <title> Leaderboard </title>
     <link rel="stylesheet" href="play.css" />
     <link rel="stylesheet" href="app.css" />
-    
+    <style>
+        table, th, td, tr{
+        border: 1px solid black;
+        }
+    </style>
 </head>
 <body>
 
