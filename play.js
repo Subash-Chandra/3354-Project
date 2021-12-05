@@ -10,38 +10,41 @@ $(document).ready(function() {
         $.ajax({
             'type': "POST",
             'url': "fetchImage.php",
+            'dataType': "json",
             'async': false,
             'data': { fake: false },
             'success': function(response){
-                 images["real0"] = response[0];
+                 images["real0"] = response;
             },
         });
         $.ajax({
             'type': "POST",
             'url': "fetchImage.php",
+            'dataType': "json",
             'async': false,
             'data': { fake: false },
             'success': function(response){
-                 images["real1"] = response[0];
+                 images["real1"] = response;
             },
         });
         $.ajax({
             'type': "POST",
             'url': "fetchImage.php",
+            'dataType': "json",
             'async': false,
             'data': { fake: false },
             'success': function(response){
-                 images["real2"] = response[0];
+                 images["real2"] = response;
             },
         });
         $.ajax({
             'type': "POST",
             'url': "fetchImage.php",
+            'dataType': "json",
             'async': false,
             'data': { fake: true },
             'success': function(response){
                 alert("fake image acquired: " + response);
-                debugger;
                 images["fake"] = response[0];
             },
         });
