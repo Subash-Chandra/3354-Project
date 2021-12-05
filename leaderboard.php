@@ -22,6 +22,8 @@ include("auth.php");
 
     <div class="container">
     <center><h1 style="font-size: 5.4rem; color: #56a5eb;margin-bottom: 5rem;">Leaderboard</h1></center>
+
+    <h2></h2>
     <table>
         <tr>
             <th>User</th>
