@@ -95,10 +95,6 @@ a {
   .hidden {
     display: none;
   }
-
-  table,th,td{
-    border: 1px #56a5eb;
-  }
   
   /* BUTTONS */
   .btn {
@@ -125,3 +121,28 @@ a {
     box-shadow: none;
     transform: none;
   }
+
+
+
+
+
+  .custom-shape-divider-top-1638705065 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-top-1638705065 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 135px;
+}
+
+.custom-shape-divider-top-1638705065 .shape-fill {
+    fill: #58C3F3;
+}
