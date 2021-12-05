@@ -33,9 +33,7 @@ include ('auth.php');
             </div>
             </center>
             <hr style="margin-top: 50px">
-            <footer>
-                <p id="progress">Question x</p>
-            </footer>
+            <center><p id="progress">Question x</p></center>
         </div>
     </div>
 </body>
