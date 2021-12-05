@@ -40,7 +40,7 @@ $(document).ready(function() {
             'async': false,
             'data': { fake: true },
             'success': function(response){
-                alert("fake image acquired");
+                alert("fake image acquired: " + response);
                 debugger;
                 images["fake"] = response[0];
             },
