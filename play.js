@@ -100,7 +100,7 @@ $(document).ready(function() {
     };
     function showScores() {
         var gameOverHTML = "<h1>Result</h1>";
-        gameOverHTML += "<h2> You Lose :( </h2>";
+        gameOverHTML += "<h2> You Lose </h2>";
         gameOverHTML += "<h2> Thank You For Playing! </h2>";
         gameOverHTML += "<h2 id='score'> Your score: " + quiz.score + "</h2>";
         gameOverHTML += '<div id="game" class="flex-center flex-column">';

@@ -3,10 +3,9 @@ body {
 }
 
 .grid {
-    margin-top: 20px;
     min-width: 460px;
     width: 68%;
-    margin:auto;
+    margin: 0 auto;
     background-color: #fff;
     padding: 10px 50px 50px 50px;
     border-radius: 50px;
