@@ -27,7 +27,7 @@ include ('auth.php');
             <div class="buttons">
                 <button id="btn0"><span id="choice0"></span></button>
                 <button id="btn1"><span id="choice1"></span></button>
-                <h2></h2>
+                <h6></h6>
                 <button id="btn2"><span id="choice2"></span></button>
                 <button id="btn3"><span id="choice3"></span></button>
             </div>

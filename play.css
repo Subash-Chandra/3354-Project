@@ -29,6 +29,9 @@ body {
 h2 {
     text-align: center;
 }
+h6{
+    font: size 36px;
+}
 
 hr {
     margin-top: 50px;
