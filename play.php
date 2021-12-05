@@ -21,19 +21,24 @@ include ('auth.php');
             <h1>Is This Even Real? - Sudden Death</h1>
             <hr style="margin-bottom: 5px">
             <center>
-            <p id="question"></p>
+                <p id="question"></p>
             </center>
             <center>
-            <div class="buttons">
-                <button id="btn0"><span id="choice0"></span></button>
-                <button id="btn1"><span id="choice1"></span></button>
-                <h6></h6>
-                <button id="btn2"><span id="choice2"></span></button>
-                <button id="btn3"><span id="choice3"></span></button>
-            </div>
+                <div class="buttons">
+                    <button id="btn0"><span id="choice0"></span></button>
+                    <button id="btn1"><span id="choice1"></span></button>
+                    <h6></h6>
+                    <button id="btn2"><span id="choice2"></span></button>
+                    <button id="btn3"><span id="choice3"></span></button>
+                </div>
             </center>
             <hr style="margin-top: 5px">
-            <center><p id="progress">Question x</p></center>
+            <center>
+                <p id="progress">Question x</p>
+            </center>
+        </div>
+        <div>
+            <button class="btn" onclick="location.href=\'index.php\'"">Home</button>
         </div>
     </div>
 </body>
