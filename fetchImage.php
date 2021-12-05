@@ -20,8 +20,8 @@ else { $imageFetchQuery = "SELECT `filename` FROM `real` WHERE `id`=$i"; }
 
 $image = mysqli_query($imageDBCon, $imageFetchQuery);
 if ($image == FALSE) die ("could not execute statement $imageFetchQuery<br />");
-$imageLocation = mysqli_fetch_row($image)[0];
+$response = mysqli_fetch_row($image)[0];
 
 
-echo json_encode($imageLocation);
+echo json_encode($response);
 ?>

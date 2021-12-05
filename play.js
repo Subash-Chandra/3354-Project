@@ -5,11 +5,18 @@ $(document).ready(function() {
     }
 
     function populate() {
-        debugger;
         // show question
         var element = document.getElementById("question");
         element.innerHTML = "Which one is fake?";
-    
+        
+        $.post("fetchImage.php",
+        {
+            fake: false
+        }, function(response) {
+            var image = response;
+            alert("fetched image " + image);
+        });
+
         // show options
         var fake = Math.floor(Math.random() * 4);
         var choices = quiz.getQuestionIndex().choices;
@@ -23,10 +30,8 @@ $(document).ready(function() {
                 element.innerHTML = images["real"]? '<img src="'+images["real"]+'"/>':"real";
                 guess("btn"+i, "real");
             }
-            
         }
         showProgress();
-        
     };
     
     function guess(id, guess) {
