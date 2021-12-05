@@ -22,6 +22,21 @@ include("auth.php");
     <div class="container">
       <div id="home" class="flex-center flex-column">
         <h1>Is This Even Real?</h1>
+
+<?php
+    require("imageDB.php");
+		$numRowQuery = "SELECT * FROM `fake`";
+		$imageList = mysqli_query($imageDBCon, $numRowQuery);
+		if ($imageList == FALSE) die ("could not execute statement $numRowQuery<br />");
+		$i = random_int(0, mysqli_num_rows($imageList));
+		$imageFetchQuery = "SELECT `filename` FROM `fake` WHERE `id`=$i";
+		$image = mysqli_query($imageDBCon, $imageFetchQuery);
+		if ($image == FALSE) die ("could not execute statement $imageFetchQuery<br />");
+		$imageLocation = mysqli_fetch_row($image)[0];
+?>
+
+
+
         <a href="/gameselect.php" class="btn">Play </a>
         <a href="/leaderboard.php" class="btn">Leaderboard</a>
         <a href="/options.html" class="btn">Options</a>
