@@ -5,6 +5,10 @@ $(document).ready(function() {
         "real1" : "https://via.placeholder.com/225x225?text=real1.jpg",
         "real2" : "https://via.placeholder.com/225x225?text=real2.jpg"
     }
+    function updateImageReference(image, realIndex) {
+        if (realIndex == -1) images.fake = image;
+        else images["real" + realIndex] = image;
+    }
 
     function populate() {
         // show question
@@ -23,8 +27,8 @@ $(document).ready(function() {
             {
                 fake: i==fakeIndex
             }, function (response) {
-                if (i==fakeIndex) images.fake = response;
-                else images["real" + realIndex] = response;
+                if (i==fakeIndex) updateImageReference(response, -1);
+                else updateImageReference(response, realIndex);
             });
             if (i==fakeIndex) {
                 element.innerHTML = images["fake"]? '<img src="/images/fake/faces'+images["fake"]+'"/>':"fake";
