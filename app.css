@@ -95,6 +95,10 @@ a {
   .hidden {
     display: none;
   }
+
+  table,th,td{
+    border: 1px #56a5eb
+  }
   
   /* BUTTONS */
   .btn {
