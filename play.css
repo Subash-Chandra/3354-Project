@@ -3,7 +3,7 @@ body {
 }
 
 .grid {
-    min-width: 460;
+    min-width: 460px;
     width: 68%;
     margin: 0 auto;
     background-color: #fff;
