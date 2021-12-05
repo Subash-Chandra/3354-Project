@@ -38,7 +38,7 @@ include ('auth.php');
             </center>
         </div>
         <div class="text-center">
-            <button class="btn" onclick="location.href=\'index.php\'">Home</button>
+            <button class="btn" onclick="location.href='index.php'">Home</button>
         </div>
     </div>
 </body>
