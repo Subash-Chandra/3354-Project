@@ -19,7 +19,9 @@ include("auth.php");
     <link rel="stylesheet" href="app.css" />
     <style>
         table, th, td, tr{
+        text-align:center;
         border: 1px solid black;
+        font-size: medium;
         }
     </style>
 </head>
