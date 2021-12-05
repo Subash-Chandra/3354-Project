@@ -49,7 +49,7 @@ function showProgress() {
     element.innerHTML = "Score " + (quiz.score);
 };
 
-jquery(document).ready(function() {
+$(document).ready(function() {
     alert("testing");
 });
 
