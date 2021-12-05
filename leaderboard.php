@@ -28,38 +28,38 @@ include("auth.php");
 <body>
 
     <div class="flex-column container">
-    <center><h1 style="font-size: 5.4rem; color: #56a5eb;margin-bottom: 5rem;">Leaderboard</h1></center>
+        <center><h1 style="font-size: 5.4rem; color: #56a5eb;margin-bottom: 5rem;">Leaderboard</h1></center>
 
-    <h2></h2>
-    <table>
-        <tr>
-            <th>User</th>
-            <th>Score</th>
-        </tr>
-    
-
-    <?php
-        require("db.php");
-        $query = "SELECT * FROM `users` ORDER BY `highscore` DESC LIMIT 5;";
-        $result = mysqli_query($con, $query);
-        if ($result == FALSE) die ("could not execute statement $query<br />");
-        while($row = mysqli_fetch_row($result)) {
-            ?>
+        <h2></h2>
+        <table>
             <tr>
-                <td> 
-                    <?php echo($row[1]); ?>
-                </td>
-                <td>
-                    <?php echo($row[2]); ?>
-                </td>
-                
-            <br>
-            <?php           
-        }
-    ?></table>
-    </div>
-    <div class="text-center">
-            <button class="btn" onclick="location.href='index.php'">Home</button>
+                <th>User</th>
+                <th>Score</th>
+            </tr>
+        
+
+        <?php
+            require("db.php");
+            $query = "SELECT * FROM `users` ORDER BY `highscore` DESC LIMIT 5;";
+            $result = mysqli_query($con, $query);
+            if ($result == FALSE) die ("could not execute statement $query<br />");
+            while($row = mysqli_fetch_row($result)) {
+                ?>
+                <tr>
+                    <td> 
+                        <?php echo($row[1]); ?>
+                    </td>
+                    <td>
+                        <?php echo($row[2]); ?>
+                    </td>
+                    
+                <br>
+                <?php           
+            }
+        ?></table>
+        <div class="text-center">
+                <button class="btn" onclick="location.href='index.php'">Home</button>
+        </div>
     </div>
 </body>
 </html>
