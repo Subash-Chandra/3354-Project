@@ -81,3 +81,30 @@ input[type='submit']{
 input[type='submit']:hover {
     background-color: #024978;
 }
+
+
+
+
+
+
+
+
+.custom-shape-divider-bottom-1638705498 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-bottom-1638705498 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 206px;
+}
+
+.custom-shape-divider-bottom-1638705498 .shape-fill {
+  fill: #58C3F3;
+}
