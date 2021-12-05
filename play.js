@@ -1,7 +1,5 @@
 $(document).ready(function() {
 
-    document.addEventListener('contextmenu', event => event.preventDefault());
-    
     var images = {
         "fake" : null,
         "real0" : null,
