@@ -6,6 +6,8 @@
 <link rel="stylesheet" href="app.css" />
 <link rel="stylesheet" href="play.css" />
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type="text/javascript" src="play.js"></script>
 <?php
 include ('auth.php');
 ?>
@@ -29,6 +31,6 @@ include ('auth.php');
 </footer>
 </div>
 </div>
-<script type="text/javascript" src="play.js"></script>
+
 </body>
 </html>
