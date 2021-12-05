@@ -15,7 +15,11 @@ body {
 }
 a{
     color:#0067ab;
+    text-align: center;
     text-decoration:none;
+}
+p{
+  text-align: center;
 }
 a:hover{
     text-decoration:underline;
