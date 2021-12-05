@@ -11,11 +11,19 @@
     color: #333;
   }
   
+a {
+  font-size: medium;
+}
+
   h1,
   h2,
   h3,
   h4 {
     margin-bottom: 1rem;
+  }
+
+  h6{
+    font-size: large;
   }
   
   h1 {
