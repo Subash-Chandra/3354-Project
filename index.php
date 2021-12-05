@@ -18,8 +18,9 @@ include("auth.php");
         <a href="/gameselect.php" class="btn">Play </a>
         <a href="/leaderboard.php" class="btn">Leaderboard</a>
         <a href="/options.html" class="btn">Options</a>
+        <h6></h6>
         <a href="javascript:window.external.AddFavorite('http://45.35.17.77', ''Is This Even real?'')">Add to Bookmarks</a>
-        <h2></h2>
+        <h6></h6>
         <a href="logout.php">Logout</a>
       </div>
     </div>
