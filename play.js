@@ -4,11 +4,7 @@ var images = {
 }
 
 function populate() {
-    /*
-    if (this.isEnded) {
-    showScores();
-    } else {
-    */
+   
     // show question
     var element = document.getElementById("question");
     element.innerHTML = "Which one is fake?";
@@ -28,7 +24,6 @@ function populate() {
         }
         
     }
-
     showProgress();
     
 };
