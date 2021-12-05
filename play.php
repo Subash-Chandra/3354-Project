@@ -20,8 +20,8 @@ include ('auth.php');
         <div id="quiz">
             <h1>Is This Even Real? - Sudden Death</h1>
             <hr style="margin-bottom: 20px">
-            <p id="question"></p>
             <center>
+            <p id="question"></p>
             <div class="buttons">
                 <button id="btn0"><span id="choice0"></span></button>
                 <button id="btn1"><span id="choice1"></span></button>
