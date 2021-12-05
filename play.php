@@ -32,7 +32,7 @@ include ('auth.php');
                 <button id="btn3"><span id="choice3"></span></button>
             </div>
             </center>
-            <hr style="margin-top: 50px">
+            <hr style="margin-top: 5px">
             <center><p id="progress">Question x</p></center>
         </div>
     </div>
