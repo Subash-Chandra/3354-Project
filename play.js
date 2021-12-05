@@ -65,11 +65,11 @@ $(document).ready(function() {
         for (var i = 0; i < choices.length; i++) {
             var element = document.getElementById("choice" + i);
             if (i==fakeIndex) {
-                element.innerHTML = images["fake"]?'<img src="/images/fake/faces/'+images["fake"]+'"/>':"fake";
+                element.innerHTML = images["fake"]? '<img src="/images/fake/faces/'+images["fake"]+'"/>':"fake";
                 guess("btn"+i, "fake");
             }
             else {
-                element.innerHTML = images["real" + realIndex]?'<img src="/images/real/faces/'+images["real"+realIndex]+'"/>':"real";
+                element.innerHTML = images["real" + realIndex]? '<img src="/images/real/faces/'+images["real"+realIndex]+'"/>':"real";
                 guess("btn"+i, "real");
                 realIndex++;
             }
