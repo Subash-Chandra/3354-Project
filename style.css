@@ -18,10 +18,8 @@ a{
     text-align: center;
     text-decoration:none;
 }
-p{
-  text-align: center;
-}
 a:hover{
+  text-align: center;
     text-decoration:underline;
 }
 

@@ -64,7 +64,9 @@ if (isset($_POST['username'])){
 			<form action="" method="post" name="login">
 			<input type="text" name="username" placeholder="Username" required />
 			<input type="password" name="password" placeholder="Password" required />
-			<input name="submit" type="submit" value="Login" />
+			<div style="text-align:center;">
+				<input name="submit" type="submit" value="Login" />
+			</div>
 			</form>
 			<p>Not registered yet? </p>
 			<a href='registration.php'>Register Here</a>
