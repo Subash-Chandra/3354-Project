@@ -20,7 +20,7 @@ include("auth.php");
     <style>
         table, th, td, tr{
         text-align:center;
-        border: 1px blue;
+        border: 1px solid blue;
         font-size: medium;
         }
     </style>
