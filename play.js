@@ -107,7 +107,7 @@ $(document).ready(function() {
         gameOverHTML += '<img src="/images/fake/faces/' + images.fake + '" style="width:350px">';
         gameOverHTML += "<h2 id='score'> Your score: " + quiz.score + "</h2>";
         gameOverHTML += '<h3 style="margin-bottom:50px"> Thank You For Playing! </h3>';
-        gameOverHTML += '<div><button class="btn" onclick="location.href=\'play.php\'"">Try Again</button></div></div>';
+        gameOverHTML += '<div><button class="btn" onclick="location.href=\'play.php\'"">Try Again</button></div>';
         gameOverHTML += '<div><button class="btn" onclick="location.href=\'index.php\'"">Home</button></div></div>';
         var element = document.getElementById("quiz");
         element.innerHTML = gameOverHTML;
