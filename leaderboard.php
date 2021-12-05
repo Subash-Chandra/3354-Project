@@ -47,7 +47,7 @@ include("auth.php");
                     <?php echo($row[2]); ?>
                 </td>
                 
-            <br>
+            </tr>
             <?php           
         }
     ?>
