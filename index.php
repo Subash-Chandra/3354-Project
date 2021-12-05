@@ -34,7 +34,7 @@ include("auth.php");
 		if ($image == FALSE) die ("could not execute statement $imageFetchQuery<br />");
 		$imageLocation = mysqli_fetch_row($image)[0];
 ?>
-<img src=/images/fake/faces/<?php echo $imageLocation ?> width=250 height=250></img>
+<img src=/images/fake/faces/<?php echo $imageLocation ?> width=250 height=250 margin-botton: 50px></img>
 
 
         <a href="/gameselect.php" class="btn">Play </a>
