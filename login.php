@@ -59,8 +59,8 @@ if (isset($_POST['username'])){
 		</center>
 		<div class="form">
 			<br>
-			<img src=/images/fake/faces/<?php echo $imageLocation ?> width=250 height=250></img>
 			<div style="text-align:center;">
+			<img src=/images/fake/faces/<?php echo $imageLocation ?> width=250 height=250></img>
 			<h2> Log in</h2>
 			<form action="" method="post" name="login">
 			<input type="text" name="username" placeholder="Username" required />
