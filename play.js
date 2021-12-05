@@ -13,7 +13,7 @@ $(document).ready(function() {
             'async': false,
             'data': { fake: false },
             'success': function(response){
-                 images["real0"] = response;
+                 images["real0"] = response[0];
             },
         });
         $.ajax({
@@ -22,7 +22,7 @@ $(document).ready(function() {
             'async': false,
             'data': { fake: false },
             'success': function(response){
-                 images["real1"] = response;
+                 images["real1"] = response[0];
             },
         });
         $.ajax({
@@ -31,7 +31,7 @@ $(document).ready(function() {
             'async': false,
             'data': { fake: false },
             'success': function(response){
-                 images["real2"] = response;
+                 images["real2"] = response[0];
             },
         });
         $.ajax({
@@ -40,9 +40,9 @@ $(document).ready(function() {
             'async': false,
             'data': { fake: true },
             'success': function(response){
-                alert("fake image acquired");
+                alert("fake image acquired: " + response);
                 debugger;
-                images["fake"] = response;
+                images["fake"] = response[0];
             },
         });
     }
