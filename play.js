@@ -1,7 +1,9 @@
 $(document).ready(function() {
     var images = {
         "fake"  : "https://via.placeholder.com/225x225?text=fake.jpg",
-        "real" : "https://via.placeholder.com/225x225?text=real.jpg",
+        "real0" : "https://via.placeholder.com/225x225?text=real0.jpg",
+        "real1" : "https://via.placeholder.com/225x225?text=real1.jpg",
+        "real2" : "https://via.placeholder.com/225x225?text=real2.jpg"
     }
 
     function populate() {
@@ -9,20 +11,21 @@ $(document).ready(function() {
         var element = document.getElementById("question");
         element.innerHTML = "Which one is fake?";
         
-        $.post("fetchImage.php",
-        {
-            fake: false
-        }, function(response) {
-            var image = response;
-            alert("fetched image " + image);
-        });
-
+        
         // show options
-        var fake = Math.floor(Math.random() * 4);
+        var fakeIndex = Math.floor(Math.random() * 4);
         var choices = quiz.getQuestionIndex().choices;
         for (var i = 0; i < choices.length; i++) {
+            $.post("fetchImage.php",
+            {
+                fake: i==fakeIndex
+            }, function(response) {
+                var image = response;
+            });
+            alert(image);
+
             var element = document.getElementById("choice" + i);
-            if (i==fake) {
+            if (i==fakeIndex) {
                 element.innerHTML = images["fake"]? '<img src="'+images["fake"]+'"/>':"fake";
                 guess("btn"+i, "fake");
             }
