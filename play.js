@@ -55,7 +55,7 @@ $(document).ready(function() {
         updateImageReferences();
         
         var element = document.getElementById("question");
-        element.innerHTML = "<center>Which one is fake?</center>";
+        element.innerHTML = "Which one is fake?";
         
         
         // show options
