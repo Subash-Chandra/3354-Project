@@ -22,6 +22,8 @@ include ('auth.php');
             <hr style="margin-bottom: 20px">
             <center>
             <p id="question"></p>
+            </center>
+            <center>
             <div class="buttons">
                 <button id="btn0"><span id="choice0"></span></button>
                 <button id="btn1"><span id="choice1"></span></button>
