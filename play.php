@@ -37,7 +37,7 @@ include ('auth.php');
                 <p id="progress">Question x</p>
             </center>
         </div>
-        <div>
+        <div class="text-center">
             <button class="btn" onclick="location.href=\'index.php\'"">Home</button>
         </div>
     </div>
