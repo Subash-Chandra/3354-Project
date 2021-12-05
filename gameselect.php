@@ -31,7 +31,9 @@ include("auth.php");
             </div>
             <script type="text/javascript" src="gameinfo.js"></script>
             <button style='margin-bottom: 40px;' class="btn" onclick="submitAnswer(gametype.choice.value, gamemode.choice.value)">Submit</button>
-            <div><button onclick="location.href='index.php'">Home</button></div>
+            <div class="text-center">
+            <button class="btn" onclick="location.href='index.php'">Home</button>
+            </div>
         </div>
     </div>
 </body>
