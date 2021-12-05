@@ -19,6 +19,7 @@ include("auth.php");
         <a href="/leaderboard.php" class="btn">Leaderboard</a>
         <a href="/options.html" class="btn">Options</a>
         <a href="javascript:window.external.AddFavorite('http://45.35.17.77', ''Is This Even real?'')">Add to Bookmarks</a>
+        <h2></h2>
         <a href="logout.php">Logout</a>
       </div>
     </div>
