@@ -35,7 +35,6 @@ include("auth.php");
         $query = "SELECT * FROM `users` ORDER BY `highscore` DESC LIMIT 5;";
         $result = mysqli_query($con, $query);
         if ($result == FALSE) die ("could not execute statement $query<br />");
-    ?>    <div class="container"> <?php
         while($row = mysqli_fetch_row($result)) {
             ?>
             <tr>
@@ -48,9 +47,7 @@ include("auth.php");
                 
             <br>
             <?php           
-        }?>
-        </div><?php
-        
+        }
     ?>
     </div>
     
