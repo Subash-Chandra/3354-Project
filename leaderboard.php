@@ -20,7 +20,7 @@ include("auth.php");
 </head>
 <body>
 
-    <div class="container">
+    <div class="grid">
     <center><h1 style="font-size: 5.4rem; color: #56a5eb;margin-bottom: 5rem;">Leaderboard</h1></center>
     <table>
         <tr>
@@ -54,8 +54,8 @@ include("auth.php");
     
     <div class="tiny-container">
         <h5 id="padding"></h5>
-        <div>
-            <button onclick="location.href='index.php'">Home</button>
+        <div class="text-center">
+            <button class="btn" onclick="location.href='index.php'">Home</button>
         </div>
     </div>
 </body>
