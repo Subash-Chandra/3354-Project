@@ -60,16 +60,16 @@ if (isset($_POST['username'])){
 		<div class="form">
 			<br>
 			<img src=/images/fake/faces/<?php echo $imageLocation ?> width=250 height=250></img>
-			<div style="text-align:center;">s
+			<div style="text-align:center;">
 			<h2> Log in</h2>
 			<form action="" method="post" name="login">
 			<input type="text" name="username" placeholder="Username" required />
 			<input type="password" name="password" placeholder="Password" required />
 			<input name="submit" type="submit" value="Login" />
-			</div>
 			</form>
 			<p>Not registered yet? </p>
 			<a href='registration.php'>Register Here</a>
+			</div>
 		</div>
 	<?php
 	} ?>
