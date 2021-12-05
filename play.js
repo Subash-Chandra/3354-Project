@@ -9,7 +9,7 @@ $(document).ready(function() {
     function updateImageReferences() {
         $.ajax({
             'type': "POST",
-            'url': "fetchImage.php",
+            'url': "fetchRealImage.php",
             'dataType': "json",
             'async': false,
             'data': { fake: false },
@@ -19,7 +19,7 @@ $(document).ready(function() {
         });
         $.ajax({
             'type': "POST",
-            'url': "fetchImage.php",
+            'url': "fetchRealImage.php",
             'dataType': "json",
             'async': false,
             'data': { fake: false },
@@ -29,7 +29,7 @@ $(document).ready(function() {
         });
         $.ajax({
             'type': "POST",
-            'url': "fetchImage.php",
+            'url': "fetchRealImage.php",
             'dataType': "json",
             'async': false,
             'data': { fake: false },
@@ -39,13 +39,12 @@ $(document).ready(function() {
         });
         $.ajax({
             'type': "POST",
-            'url': "fetchImage.php",
+            'url': "fetchFakeImage.php",
             'dataType': "json",
             'async': false,
             'data': { fake: true },
             'success': function(response){
-                alert("fake image acquired: " + response);
-                images["fake"] = response[0];
+                images["fake"] = response;
             },
         });
     }
@@ -53,7 +52,6 @@ $(document).ready(function() {
     
     function populate() {
         updateImageReferences();
-        alert("updateImageReferences function left");
         
         var element = document.getElementById("question");
         element.innerHTML = "Which one is fake?";
@@ -65,6 +63,7 @@ $(document).ready(function() {
         var choices = quiz.getQuestionIndex().choices;
         
         for (var i = 0; i < choices.length; i++) {
+            var element = document.getElementById("choice" + i);
             if (i==fakeIndex) {
                 element.innerHTML = images["fake"]? '<img src="/images/fake/faces'+images["fake"]+'"/>':"fake";
                 guess("btn"+i, "fake");
@@ -74,7 +73,6 @@ $(document).ready(function() {
                 guess("btn"+i, "real");
                 realIndex++;
             }
-            var element = document.getElementById("choice" + i);
         }
         showProgress();
     };
