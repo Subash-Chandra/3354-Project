@@ -16,13 +16,14 @@ $(document).ready(function() {
         var fakeIndex = Math.floor(Math.random() * 4);
         var choices = quiz.getQuestionIndex().choices;
         for (var i = 0; i < choices.length; i++) {
+            var image = null;
             $.post("fetchImage.php",
             {
                 fake: i==fakeIndex
             }, function(response) {
-                var image = response;
+                image = response;
             });
-            alert(image);
+            if (image != null) alert(image);
 
             var element = document.getElementById("choice" + i);
             if (i==fakeIndex) {
