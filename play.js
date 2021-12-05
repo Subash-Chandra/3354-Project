@@ -11,7 +11,7 @@ $(document).ready(function() {
 });
 
 function populate() {
-    debug();
+    debugger;
     // show question
     var element = document.getElementById("question");
     element.innerHTML = "Which one is fake?";
