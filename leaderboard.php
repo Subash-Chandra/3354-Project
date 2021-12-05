@@ -20,7 +20,7 @@ include("auth.php");
 </head>
 <body>
 
-    <div class="container">
+    <div class="flex-column container">
     <center><h1 style="font-size: 5.4rem; color: #56a5eb;margin-bottom: 5rem;">Leaderboard</h1></center>
     <table>
         <tr>
