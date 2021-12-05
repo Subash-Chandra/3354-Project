@@ -1,17 +1,57 @@
 $(document).ready(function() {
     var images = {
-        "fake"  : "https://via.placeholder.com/225x225?text=fake.jpg",
-        "real0" : "https://via.placeholder.com/225x225?text=real0.jpg",
-        "real1" : "https://via.placeholder.com/225x225?text=real1.jpg",
-        "real2" : "https://via.placeholder.com/225x225?text=real2.jpg"
-    }
-    function updateImageReference(image, realIndex) {
-        if (realIndex == -1) images.fake = image;
-        else images["real" + realIndex] = image;
+        "fake" : null,
+        "real0" : null,
+        "real1" : null,
+        "real2" : null
     }
 
+    function updateImageReferences() {
+        $.ajax({
+            'type': "POST",
+            'url': "fetchImage.php",
+            'async': false,
+            'data': { fake: false },
+            'success': function(response){
+                 images["real0"] = response;
+            },
+        });
+        $.ajax({
+            'type': "POST",
+            'url': "fetchImage.php",
+            'async': false,
+            'data': { fake: false },
+            'success': function(response){
+                 images["real1"] = response;
+            },
+        });
+        $.ajax({
+            'type': "POST",
+            'url': "fetchImage.php",
+            'async': false,
+            'data': { fake: false },
+            'success': function(response){
+                 images["real2"] = response;
+            },
+        });
+        $.ajax({
+            'type': "POST",
+            'url': "fetchImage.php",
+            'async': false,
+            'data': { fake: true },
+            'success': function(response){
+                alert("fake image acquired");
+                debugger;
+                images["fake"] = response;
+            },
+        });
+    }
+    
+    
     function populate() {
-        // show question
+        updateImageReferences();
+        alert("updateImageReferences function left");
+        
         var element = document.getElementById("question");
         element.innerHTML = "Which one is fake?";
         
@@ -22,14 +62,6 @@ $(document).ready(function() {
         var choices = quiz.getQuestionIndex().choices;
         
         for (var i = 0; i < choices.length; i++) {
-            
-            $.post("fetchImage.php",
-            {
-                fake: i==fakeIndex
-            }, function (response) {
-                if (i==fakeIndex) updateImageReference(response, -1);
-                else updateImageReference(response, realIndex);
-            });
             if (i==fakeIndex) {
                 element.innerHTML = images["fake"]? '<img src="/images/fake/faces'+images["fake"]+'"/>':"fake";
                 guess("btn"+i, "fake");
@@ -37,6 +69,7 @@ $(document).ready(function() {
             else {
                 element.innerHTML = images["real" + realIndex]? '<img src="/images/real/faces/'+images["real"+realIndex]+'"/>':"real";
                 guess("btn"+i, "real");
+                realIndex++;
             }
             var element = document.getElementById("choice" + i);
         }
