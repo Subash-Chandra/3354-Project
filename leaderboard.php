@@ -20,12 +20,12 @@ include("auth.php");
 </head>
 <body>
 
-    <div class="grid">
+    <div class="container">
     <center><h1 style="font-size: 5.4rem; color: #56a5eb;margin-bottom: 5rem;">Leaderboard</h1></center>
     <table>
         <tr>
-            <th>Score</th>
             <th>User</th>
+            <th>Score</th>
         </tr>
 
     <?php
