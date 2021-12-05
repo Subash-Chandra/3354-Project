@@ -30,7 +30,7 @@ include("auth.php");
             <th>User</th>
             <th>Score</th>
         </tr>
-    </table>
+    
 
     <?php
         require("db.php");
@@ -50,7 +50,7 @@ include("auth.php");
             <br>
             <?php           
         }
-    ?>
+    ?></table>
     </div>
     <div class="text-center">
             <button class="btn" onclick="location.href='index.php'">Home</button>
