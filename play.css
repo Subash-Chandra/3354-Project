@@ -3,6 +3,7 @@ body {
 }
 
 .grid {
+    min-width: 460;
     width: 68%;
     margin: 0 auto;
     background-color: #fff;
@@ -23,7 +24,7 @@ body {
     text-align: center;
     color: #ffffff;
     padding: 2px 0px;
-    border-radius: 50px;
+    border-radius: 25px;
 }
 
 h2 {
