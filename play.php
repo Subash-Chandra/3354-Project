@@ -19,7 +19,7 @@ include ('auth.php');
     <div class="grid">
         <div id="quiz">
             <h1>Is This Even Real? - Sudden Death</h1>
-            <hr style="margin-bottom: 20px">
+            <hr style="margin-bottom: 5px">
             <center>
             <p id="question"></p>
             </center>
