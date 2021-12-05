@@ -18,6 +18,10 @@ body {
     text-align: center;
 }
 
+table,th,td{
+    border: 1px #56a5eb;
+  }
+
 .buttons img {
     width: 350px;
 }
