@@ -7,6 +7,10 @@
 </head>
 <body>
 <?php
+error_reporting(-1);
+ini_set('error_reporting', E_ALL);
+ini_set('display_errors', 'On');  //On or Off
+
 require('db.php');
 // If form submitted, insert values into the database.
 if (isset($_REQUEST['username'])){
