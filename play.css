@@ -112,6 +112,7 @@ hr {
 
 
 .custom-shape-divider-bottom-1638705821 {
+    z-index: 0;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -122,6 +123,7 @@ hr {
 }
 
 .custom-shape-divider-bottom-1638705821 svg {
+    z-index: 0;
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
@@ -129,5 +131,6 @@ hr {
 }
 
 .custom-shape-divider-bottom-1638705821 .shape-fill {
+    z-index: 0;
     fill: #58C3F3;
 }
