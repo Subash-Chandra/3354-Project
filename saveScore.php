@@ -11,7 +11,7 @@ if (isset($_SESSION["username"])) {
 }
 $checkQuery = "SELECT `highscore` from `users` WHERE `username`='$currentUser'";
 $result = mysqli_query($con, $checkQuery);
-$currentHighscore = mysqli_fetch_row($result);
+$currentHighscore = $result;
 if ($score > $currentHighscore) {
     $updateQuery = "UPDATE `users` SET `highscore` = $score WHERE `username` = '$currentUser'";
     mysqli_query($con, $updateQuery);
