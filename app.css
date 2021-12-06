@@ -38,6 +38,7 @@ a {
   }
   
   h2 {
+    z-index:10;
     font-size: 4.2rem;
     margin-bottom: 4rem;
     font-weight: 700;
@@ -98,6 +99,7 @@ a {
   
   /* BUTTONS */
   .btn {
+    z-index: 10;
     font-size: 1.8rem;
     padding: 1rem 0;
     width: 20rem;
@@ -110,6 +112,7 @@ a {
   }
   
   .btn:hover {
+    z-index: 10;
     cursor: pointer;
     box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
     transform: translateY(-0.1rem);
@@ -117,6 +120,7 @@ a {
   }
   
   .btn[disabled]:hover {
+    z-index: 10;
     cursor: not-allowed;
     box-shadow: none;
     transform: none;
@@ -127,6 +131,7 @@ a {
 
 
   .custom-shape-divider-top-1638705065 {
+    z-index: -1;
     position: absolute;
     top: 0;
     left: 0;
@@ -137,6 +142,7 @@ a {
 }
 
 .custom-shape-divider-top-1638705065 svg {
+    z-index: -1;
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
@@ -144,10 +150,12 @@ a {
 }
 
 .custom-shape-divider-top-1638705065 .shape-fill {
+    z-index: -1;
     fill: #58C3F3;
 }
 
 .custom-shape-divider-bottom-1638706257 {
+  z-index: -1;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -158,6 +166,7 @@ a {
 }
 
 .custom-shape-divider-bottom-1638706257 svg {
+  z-index: -1;
   position: relative;
   display: block;
   width: calc(101% + 1.3px);
@@ -165,5 +174,6 @@ a {
 }
 
 .custom-shape-divider-bottom-1638706257 .shape-fill {
+  z-index: -1;
   fill: #58C3F3;
 }
