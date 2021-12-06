@@ -1,9 +1,4 @@
 <?php
-error_reporting(-1);
-// Same as error_reporting(E_ALL);
-ini_set('error_reporting', E_ALL);
-ini_set('display_errors', 'On');  //On or Off
-
 //include auth.php file on all secure pages
 include("auth.php");
 
