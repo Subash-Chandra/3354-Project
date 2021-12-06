@@ -30,11 +30,11 @@ if (isset($_REQUEST['username'])){
 
 	$date = date("Y-m-d H:i:s");
         echo($date);
-        $query = "INSERT into `users` (username, password, email, dateCreated) 
-                VALUES ('$username', '".md5($password)."', '$email', '$date')";
+        $query = "INSERT into `users` (username, password, email, dateCreated, highscore) 
+                VALUES ('$username', '".md5($password)."', '$email', '$date', 0)";
         $result = mysqli_query($con,$query);
-        echo ($result);
-        if($result){
+        
+        if($result) {
             echo "<div class='form'>
 <h3>You are registered successfully.</h3>
 <br/>Click here to <a href='login.php'>Login</a></div>";
