@@ -89,6 +89,13 @@ $(document).ready(function() {
             }
             else {
                 //guessed a real picture, end game
+                $.ajax({
+                    'type': "POST",
+                    'url': "saveScore.php",
+                    'dataType': "json",
+                    'async': false,
+                    'data': { score: quiz.score }
+                });
                 showScores();
             }    
         }
