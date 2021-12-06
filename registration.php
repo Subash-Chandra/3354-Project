@@ -14,6 +14,7 @@ ini_set('display_errors', 'On');  //On or Off
 require('db.php');
 // If form submitted, insert values into the database.
 if (isset($_REQUEST['username'])){
+        echo('Found username add request.');
         // removes backslashes
 	$username = stripslashes($_REQUEST['username']);
         //escapes special characters in a string
@@ -26,6 +27,7 @@ if (isset($_REQUEST['username'])){
         $query = "INSERT into `users` (username, password, email, dateCreated) 
                 VALUES ('$username', '".md5($password)."', '$email', '$date')";
         $result = mysqli_query($con,$query);
+        echo ($result);
         if($result){
             echo "<div class='form'>
 <h3>You are registered successfully.</h3>
