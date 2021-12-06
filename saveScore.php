@@ -9,9 +9,12 @@ if (isset($_POST["score"])) {
 if (isset($_SESSION["username"])) {
     $currentUser = $_SESSION["username"];
 }
-
-$query = "UPDATE `users` SET `highscore` = $score WHERE `username` = '$currentUser'";
-mysqli_query($con, $query);
-
+$checkQuery = "SELECT `highscore` from `users` WHERE `username`='$currentUser'";
+$result = mysqli_query($con, $checkQuery);
+$currentHighscore = mysqli_fetch_row($result);
+if ($score > $currentHighscore) {
+    $updateQuery = "UPDATE `users` SET `highscore` = $score WHERE `username` = '$currentUser'";
+    mysqli_query($con, $updateQuery);
+}
 $con->close();
 ?>

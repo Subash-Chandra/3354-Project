@@ -94,10 +94,7 @@ $(document).ready(function() {
                     'url': "saveScore.php",
                     'dataType': "json",
                     'async': false,
-                    'data': { score: quiz.score },
-                    'success': function(response){
-                         alert("Game over! Saved score.");
-                    },
+                    'data': { score: quiz.score }
                 });
                 showScores();
             }    
